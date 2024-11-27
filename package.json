@@ -10,6 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@aptos-labs/wallet-adapter-ant-design": "^3.0.21",
+    "@aptos-labs/wallet-adapter-react": "^3.7.7",
+    "@mizuwallet-sdk/core": "^1.4.0",
+    "@telegram-apps/bridge": "^1.4.0",
+    "aptos": "^1.21.0",
+    "graphql": "^16.9.0",
+    "graphql-request": "^7.1.2",
+    "petra-plugin-wallet-adapter": "^0.4.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

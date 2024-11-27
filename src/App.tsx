@@ -1,3 +1,7 @@
+import { WalletSelector } from "@aptos-labs/wallet-adapter-ant-design";
+import "@aptos-labs/wallet-adapter-ant-design/dist/index.css";
+import { useWallet } from "@aptos-labs/wallet-adapter-react";
+
 
 const GameWrapper1 = () => {
   return(
@@ -67,10 +71,15 @@ const GameWrapper2 = () => {
 
 
 function App() {
+  const { connected } = useWallet();
   return (
     <>
-    <GameWrapper2 />
-  
+      <div className="w-screen h-screen flex flex-col justify-center align-middle bg-neutral-100">
+        <div className="absolute right-4 top-4 items-end">
+            <WalletSelector />
+        </div>
+        {connected ? GameWrapper2() : GameWrapper1()}
+      </div>
     </>
   )
 }
